@@ -15,7 +15,7 @@ export async function getItems(): Promise<Item[]> {
   return items as Item[];
 }
 
-export async function searchItems(userSearch: string): Promise<Item> {
+export async function searchItems(userSearch: string): Promise<Item[]> {
   const url = "https://dummyjson.com/products/search?q=" + userSearch;
   const res = await fetch(url);
   const item = await res.json();
